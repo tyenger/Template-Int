@@ -1,38 +1,180 @@
-/* STYLES FOR ABOVE THE FOLD */
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #hero {
-    font-family: "Roboto", "Arial", sans-serif;
-    /* Centers button */
-    text-align: center;
-    /* changes on tablet */
-    padding: 0 1rem;
-    padding-bottom: 6.25rem;
+@media only screen and (min-width: 0rem) {
+  #hero-1619 {
+    padding: var(--sectionPadding);
+    /* 200px - 300px - leaving extra space for the navigation */
+    padding-top: clamp(12.5rem, 31.95vw, 18.75rem);
     position: relative;
     z-index: 1;
-    /* prevents overflow from the lines extending past the screen width */
-    overflow: hidden;
   }
-  #hero .cs-picture {
-    /* Background Image */
+  #hero-1619 .cs-container {
     width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 60px - 180px */
+    gap: clamp(3.75rem, 13vw, 11.25rem);
+  }
+  #hero-1619 .sm-none {
+    display: none;
+  }
+  #hero-1619 .cs-content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-align: left;
+    width: 100%;
+  }
+  #hero-1619 .cs-content p {
+    color: var(--white);
+    font: clamp(16px, 4vw, 18px)/calc(1em + 6px) "Poppins-Regular", sans-serif;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
+  #hero-1619 .cs-content p span {
+    font-weight: 700;
+  }
+  #hero-1619 .cs-content .buttons {
+    display: flex;
+    gap: 15px;
+  }
+  #hero-1619 .cs-topper {
+    /* 13px - 16px */
+    font: clamp(14px, 4vw, 18px)/calc(1em + 6px) "Montserrat", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    width: 100%;
+  }
+  #hero-1619 .cs-topper > span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  #hero-1619 .cs-topper .name {
+    font-weight: 700;
+  }
+  #hero-1619 .cs-topper .desc {
+    font-weight: 100;
+    font-size: 14px;
+  }
+  #hero-1619 .cs-chevron {
+    --chevronColor: var(--primary);
+    width: 3rem;
+    height: auto;
+  }
+  #hero-1619 .cs-title {
+    font: clamp(32px, 4vw, 60px)/calc(1em + 6px);
+    max-width: 100%;
+    margin-bottom: 15px;
+    color: var(--white);
+    position: relative;
+  }
+  #hero-1619 .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    /* 464px - 622px */
+    max-width: clamp(29rem, 60vw, 38.785rem);
+    margin: 0 0 2.5rem 0;
+    color: #fff;
+  }
+  #hero-1619 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  #hero-1619 .cs-item {
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    grid-row: span 1;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    transform: scale(100%);
+    transition: box-shadow 0.3s, transform 0.3s;
+    width: 100%;
+    z-index: 1;
+  }
+  #hero-1619 .cs-item:hover {
+    box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.28);
+    transform: scale(105%);
+  }
+  #hero-1619 .cs-item a {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    width: 100%;
+    padding: 15px 30px;
+    text-decoration: none;
+  }
+  #hero-1619 .cs-icon {
+    margin: 0 auto 10px;
+  }
+  #hero-1619 .cs-h3 {
+    align-items: center;
+    color: var(--primary);
+    display: flex;
+    font: clamp(16px, 1vw, 28px)/calc(1em + 6px) "Poppins-Medium", sans-serif;
+    justify-content: center;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+  }
+  #hero-1619 .cs-item-text {
+    font: clamp(14px, 1.5vw, 16px)/calc(1em + 6px) "Poppins-Light", sans-serif;
+    max-width: 100%;
+    margin: 0;
+    padding: 15px;
+    color: var(--bodyTextColor);
+    flex-grow: 1;
+    text-wrap: balance;
+  }
+  #hero-1619 .cs-background {
+    width: 100%;
+    height: 55%;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
   }
-  #hero .cs-picture:before {
-    /* Black Color Overlay */
+  #hero-1619 .cs-background:before {
+    /* Overlay */
     content: "";
     width: 100%;
     height: 100%;
-    background: #000;
-    opacity: 0.7;
+    background: #111926;
+    opacity: 0.8;
     display: block;
     position: absolute;
     top: 0;
@@ -41,257 +183,63 @@
     /* prevents the cursor from interacting with it */
     pointer-events: none;
   }
-  #hero .cs-picture img {
+  #hero-1619 .cs-background img {
     width: 100%;
     height: 100%;
-    /* Makes image act like a background-image */
     object-fit: cover;
+    /* makes the top of the image start at the top of the parent */
+    object-position: top;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  #hero .cs-container {
-    width: 100%;
-    max-width: 80em;
-    margin: auto;
-    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
-    /* 144px - 280px - leaving extra space for the navigation */
-    /* changes on tablet */
-    padding: clamp(9em, 25.95vw, 17.5em) 0;
-    position: relative;
-  }
-  #hero .cs-container:before {
-    /* Left Line */
-    content: "";
-    width: 1px;
-    height: 100%;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-    opacity: 1;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #hero .cs-flex-group {
-    width: 80vw;
-    /* 464px - 562px */
-    max-width: clamp(29em, 60vw, 35.125em);
-    margin: auto;
-    /* 60px - 220px */
-    margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  #hero .cs-topper {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--primary);
-  }
-  #hero .cs-title {
-    text-align: center;
-    width: 100%;
-    color: var(--bodyTextColorWhite);
-  }
-  #hero .cs-text {
-    text-align: center;
-    /* 32px - 40px */
-    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
-    /* 40px - 48px */
-    margin-bottom: clamp(2.5rem, 4vw, 3rem);
-    color: var(--bodyTextColorWhite);
-  }
-  #hero .cs-button-solid {
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    height: initial;
-    margin-bottom: 1rem;
-  }
-  #hero .cs-button-transparent {
-    font-size: 1rem;
-    font-weight: 700;
-    /* 46px - 56px */
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    text-decoration: none;
-    width: 11.25rem;
-    /* 46px - 56px */
-    height: clamp(2.875em, 5.5vw, 3.5em);
-    margin: 0 0.5rem;
-    box-sizing: border-box;
-    padding: 0;
-    color: #fff;
-    background-color: transparent;
-    border: 1px solid var(--bodyTextColorWhite);
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  #hero .cs-button-transparent:before {
-    content: "";
-    background: #000;
-    opacity: 1;
-    display: block;
-    position: absolute;
-    /* so it sits on top of the border */
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    left: -1px;
-    z-index: -1;
-    /* this is what creates the grow affect on hover */
-    transform: scaleX(0);
-    transition: transform 0.3s;
-    transform-origin: left;
-  }
-  #hero .cs-button-transparent:hover:before {
-    transform: scaleX(1);
-  }
-  #hero .cs-button-transparent .cs-img {
-    margin-right: 0.75rem;
-    display: block;
   }
 }
 /* Tablet - 768px */
-@media only screen and (min-width: 48em) {
-  #hero {
-    /* 32px - 40px */
-    padding: 0 clamp(2em, 5vw, 2.5em);
+@media only screen and (min-width: 48rem) {
+  #hero-1619 {
+    padding-bottom: 0;
   }
-  #hero .cs-container {
-    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
+  #hero-1619 .cs-container {
+    align-items: flex-start;
   }
-  #hero .cs-container:after {
-    /* Right Line */
-    content: "";
-    width: 1px;
-    height: 100%;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+  #hero-1619 .cs-content {
+    text-align: left;
+    margin-left: 0;
+    align-items: flex-start;
+  }
+  #hero-1619 .cs-item {
+    grid-column: span 6;
+  }
+  #hero-1619 .cs-background {
+    height: 87%;
+  }
+  #hero-1619 .cs-background:before {
+    background: linear-gradient(90deg, #111926 21.41%, rgba(17, 25, 38, 0.72) 60%, rgba(17, 25, 38, 0) 100%);
     opacity: 1;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  #hero .cs-button-solid {
-    margin-right: 1.25rem;
-    margin-bottom: 0;
   }
 }
-/* Desktop Parallax Effect - 1300px */
-@media only screen and (min-width: 81.25em) {
-  #hero {
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #hero-1619 .cs-item {
+    grid-column: span 3;
+  }
+  #hero-1619 .sm-none {
+    display: inline-block;
+  }
+}
+/* Large Desktop Parallax Effect - 100px */
+@media only screen and (min-width: 100rem) {
+  #hero-1619 .cs-background {
     background: url("/assets/images/landing.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* creates parallax effect on background image */
+    /* creates the parallax effect */
     background-attachment: fixed;
+    background-position: right;
   }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #hero .cs-background:before {
-    opacity: 0.8;
-  }
-}
-/*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-/* Mobile */
-@media only screen and (min-width: 0em) {
-  .services {
-    width: 90%;
-    max-width: 82.5em;
-    margin: auto;
-    margin-top: -10.4375em;
-    margin-bottom: 3.125em;
-    padding: 3.125em 1.25em;
-    background: #fff;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-    border-top: 0.375em solid var(--primary);
-    border-radius: 0.3125em;
-    position: relative;
-    z-index: 100;
-  }
-  .services .card {
-    width: 100%;
-    max-width: 22.3125em;
-    margin: auto;
-    margin-bottom: 3.125em;
-    display: block;
-  }
-  .services .card:last-of-type {
-    margin-bottom: 0;
-  }
-  .services .card picture {
-    width: 5.5em;
-    height: 5.5em;
-    margin: auto;
-    margin-bottom: 1.4375em;
-    background: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .services .card picture img {
-    width: 3em;
-    height: 3em;
-  }
-  .services .card h2 {
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 1.35em;
-    text-align: center;
-    margin-bottom: 0.65em;
-    color: #1a1a1a;
-  }
-  .services .card p {
-    line-height: 1.3333333333em;
-    text-align: center;
-    width: 100%;
-    opacity: 0.7;
-  }
-}
-/* Inbetween */
-@media only screen and (min-width: 768px) {
-  .services {
-    font-size: min(1.8vw, 1em);
-    width: 98%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .services .card {
-    max-width: 20.3125em;
-    margin: 0;
-  }
-}
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  .services {
-    padding: 3.125em 5em;
-  }
-  .services .card {
-    max-width: 22.3125em;
-  }
-}
-/* Dark mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #services {
-    background: var(--medium);
-  }
-  body.dark-mode #services picture {
-    background: var(--primaryDark);
-  }
-  body.dark-mode #services h2 {
-    font-weight: bold;
-    color: #fff;
+  #hero-1619 .cs-background img {
+    display: none;
   }
 }
 

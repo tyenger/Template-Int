@@ -51,6 +51,7 @@
             height: calc(581 / 16 * 1em);
             top: 0;
             left: 0;
+            transform: scale(-1, 1);
         }
 
         .cs-picture2 {
@@ -75,6 +76,7 @@
         }
 
         .cs-title {
+            color: var(--primary);
             text-align: left;
             max-width: calc(800 / 16 * 1rem);
         }
@@ -155,50 +157,12 @@
         .cs-right {
             margin: 0;
         }
-    }
-}
 
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #sbs {
-            .cs-left {
-                &:before,
-                &:after {
-                    background: var(--accent);
-                }
-            }
+        .cs-chevron {
+            --chevronColor: var(--primary);
 
-            .cs-picture2 {
-                background-color: var(--dark);
-                /* 6px - 12px */
-                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-            }
-
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-
-            .cs-title,
-            .cs-text,
-            .cs-h3,
-            .cs-flex-p,
-            .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-flex-group {
-                background-color: var(--accent);
-            }
-
-            .cs-job {
-                color: var(--bodyTextColorWhite);
-                opacity: 0.8;
-            }
-
-            .cs-quote-icon {
-                opacity: 0.2;
-            }
+            width: calc(48 / 16 * 1rem);
+            height: auto;
         }
     }
 }
@@ -278,6 +242,7 @@
         }
 
         .cs-title {
+            color: var(--primary);
             text-align: left;
             max-width: calc(800 / 16 * 1rem);
         }
@@ -355,53 +320,16 @@
         .cs-right {
             margin: 0;
         }
-    }
-}
 
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #sbs-r {
-            .cs-left {
-                &:before,
-                &:after {
-                    background: var(--accent);
-                }
-            }
+        .cs-chevron {
+            --chevronColor: var(--primary);
 
-            .cs-picture2 {
-                background-color: var(--dark);
-                /* 6px - 12px */
-                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-            }
-
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-
-            .cs-title,
-            .cs-text,
-            .cs-h3,
-            .cs-flex-p,
-            .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-flex-group {
-                background-color: var(--accent);
-            }
-
-            .cs-job {
-                color: var(--bodyTextColorWhite);
-                opacity: 0.8;
-            }
-
-            .cs-quote-icon {
-                opacity: 0.2;
-            }
+            width: calc(48 / 16 * 1rem);
+            height: auto;
         }
     }
 }
+
 
 /*-- -------------------------- -->
 <---          Gallery           -->
@@ -515,17 +443,6 @@
             .cs-picture3 {
                 width: calc(420 / 16 * 1em);
                 height: calc(629 / 16 * 1em);
-            }
-        }
-    }
-}
-
-/* Dark mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #gallery {
-            .cs-title {
-                color: var(--bodyTextColorWhite);
             }
         }
     }

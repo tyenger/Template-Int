@@ -8,13 +8,15 @@
 @media only screen and (min-width: 0em) {
     // Website colors
     :root {
-        --primary: #ffba19;
-        --primaryLight: #ffd675;
+        --primary: #2c72a4;
+        --primaryLight: #757575;
+        --black: #000;
         --secondary: #001f3f;
         --secondaryLight: #001f3f;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
+        --white: #fff;
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -29,25 +31,17 @@
     // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
     .cs-topper {
         display: block;
-        margin-bottom: 0.25rem;
+        margin-bottom: 30px;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        font-size: var(--topperFontSize);
-        line-height: 1.2em;
-        font-weight: 700;
-        color: var(--primary);
-        text-align: inherit;
+        font: clamp(14px, 4vw, 18px)/calc(1em + 6px) "Montserrat", sans-serif;
+        color: var(--primaryLight);
+        text-align: center;
     }
 
     .cs-title {
         position: relative;
-        margin: 0 0 1rem 0;
-        max-width: 43.75rem;
-        font-size: var(--headerFontSize);
-        line-height: 1.2em;
-        font-weight: 900;
-        color: var(--headerColor);
-        text-align: inherit;
+        font: 900 clamp(42px, 4vw, 58px)/calc(1em + 6px) "Montserrat", sans-serif;
+        color: var(--white);
     }
 
     .cs-text {
@@ -60,48 +54,54 @@
         text-align: inherit;
     }
 
-    // Button - can be replaced using CodeStitch's "Button" Stitches
     .cs-button-solid {
-        z-index: 1;
-        position: relative;
-        display: inline-block;
         background-color: var(--primary);
-        width: auto;
-        padding: 0 calc(30 / 16 * 1rem);
+        border: 1px solid var(--primary);
+        border-radius: 4px;
+        color: #fff;
+        display: inline-block;
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: clamp(2.875rem, 8vw, 3.5rem);
+        margin: auto;
+        padding: 0 calc(24 / 16 * 1rem);
+        position: relative;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: calc(16 / 16 * 1rem);
-        line-height: calc(50 / 16 * 1em);
-        font-weight: bold;
-        // Transition Properties
-        color: #000;
-        transition: color 0.3s;
-        transition-delay: 0.1s;
-        text-align: center;
-
+        transition: background-color 0.3s;
+        white-space: nowrap;
+        z-index: 1;
+        
         &:hover {
-            color: #fff;
-            &:before {
-                width: 100%;
-            }
-        }
-
-        &:before {
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            opacity: 1;
-            display: block;
-            background-color: #000;
-            height: 100%;
-
-            //Transition properties
-            width: 0;
-            transition: width 0.3s;
+            background-color: var(--primaryLight);
+            border: 1px solid var(--primaryLight);
         }
     }
+    
+    .cs-button-outline {
+        background-color: transparent;
+        border: 1px solid var(--primary);
+        border-radius: 4px;
+        color: #fff;
+        display: inline-block;
+        font-size: calc(16 / 16 * 1rem);
+        font-weight: 700;
+        line-height: clamp(2.875rem, 8vw, 3.5rem);
+        margin: auto;
+        padding: 0 calc(24 / 16 * 1rem);
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+        z-index: 1;
+        
+        &:hover {
+            background-color: var(--primaryLight);
+            border: 1px solid var(--primaryLight);
+        }
+    }
+    
+                                    
 }
 
 /* Fonts and general styles */
@@ -112,7 +112,7 @@
         margin: 0;
         overflow-x: hidden;
         padding: 0;
-        font-family: "Roboto", Arial, sans-serif;
+        font-family: "Poppins-Regular", Arial, sans-serif;
         font-size: 100%;
         color: var(--bodyTextColor);
     }
@@ -175,39 +175,47 @@
     }
     // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
 
-    /* roboto-regular - latin */
+    /* Montserrat */
     @font-face {
         font-style: normal;
-        font-family: "Roboto";
+        font-family: "Montserrat";
         font-weight: 400;
         font-display: swap;
         src: local(""),
-            url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
+            url("/assets/fonts/Montserrat.woff2") format("woff2"),
             /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/roboto-v29-latin-regular.woff")
+                url("/assets/fonts/Montserrat.woff")
                 format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
-    /* roboto-700 - latin */
+
+    /* Poppins-Regular */
     @font-face {
         font-style: normal;
-        font-family: "Roboto";
-        font-weight: 700;
+        font-family: "Poppins-Regular";
+        font-weight: 400;
         font-display: swap;
         src: local(""),
-            url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            url("/assets/fonts/Poppins-Regular.ttf") format("truetype");
     }
-    /* roboto-900 - latin */
+
+    /* Poppins-Medium */
     @font-face {
         font-style: normal;
-        font-family: "Roboto";
-        font-weight: 900;
+        font-family: "Poppins-Medium";
+        font-weight: 400;
         font-display: swap;
         src: local(""),
-            url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            url("/assets/fonts/Poppins-Medium.ttf") format("truetype");
+    }
+
+    /* Poppins-Light */
+    @font-face {
+        font-style: normal;
+        font-family: "Poppins-Light";
+        font-weight: 400;
+        font-display: swap;
+        src: local(""),
+            url("/assets/fonts/Poppins-Light.ttf") format("truetype");
     }
 }
 
@@ -228,84 +236,6 @@
     }
 }
 
-/*-- -------------------------- -->
-<---      Dark Mode Toggle      -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #dark-mode-toggle {
-            .cs-sun {
-                opacity: 1;
-                transform: translate(-50%, -50%);
-            }
-
-            .cs-moon {
-                opacity: 0;
-                transform: translate(-50%, -150%);
-                fill: #fff;
-            }
-        }
-    }
-
-    #dark-mode-toggle {
-        z-index: 1000;
-        position: absolute;
-        top: calc(10 / 16 * 1rem);
-        right: calc(70 / 16 * 1rem);
-        display: block;
-        border: none;
-        background: transparent;
-        height: calc(48 / 16 * 1rem);
-        width: calc(48 / 16 * 1rem);
-        overflow: hidden;
-        padding: 0;
-
-        img,
-        svg {
-            //center image inside button
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: calc(20 / 16 * 1rem);
-            width: calc(20 / 16 * 1rem);
-            pointer-events: none;
-        }
-
-        .cs-moon {
-            z-index: 2;
-            // Transition properties
-            transition: transform 0.3s, opacity 0.3s;
-
-            // fill: yellow; --> uncomment to change the color of the moon if needed
-        }
-
-        .cs-sun {
-            z-index: 1;
-            opacity: 0;
-            // Transition property
-            transform: translate(-50%, 100%);
-            transition: transform 0.3s, opacity 0.3s;
-        }
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #dark-mode-toggle {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
-        margin: 0;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-}
 
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
@@ -328,7 +258,7 @@
         box-sizing: border-box;
         padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
+        font-family: "Montserrat", sans-serif;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         .cs-container {
@@ -345,8 +275,8 @@
             align-items: center;
             margin: 0 auto 0 0;
             height: 100%;
-            max-width: calc(146 / 16 * 1rem);
-            width: 40%;
+            max-width: 60%;
+            width: 50%;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
             padding: 0;
@@ -577,32 +507,6 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
-    body.dark-mode {
-        #cs-navigation {
-            background-color: var(--dark);
-
-            .cs-logo {
-                /* makes it white */
-                filter: grayscale(1) brightness(1000%);
-            }
-
-            .cs-line {
-                background-color: #fff;
-            }
-
-            .cs-ul-wrapper {
-                background-color: var(--medium);
-            }
-
-            .cs-li-link {
-                color: var(--bodyTextColorWhite);
-            }
-        }
-    }
-}
-
 /*-- -------------------------- -->
 <---     Navigation Dropdown    -->
 <--- -------------------------- -*/
@@ -804,29 +708,6 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #cs-navigation {
-            .cs-drop-ul {
-                background-color: var(--dark);
-            }
-
-            .cs-li-link {
-                &.cs-drop-link {
-                    &:hover {
-                        background-color: var(--medium);
-                    }
-                }
-            }
-
-            .cs-drop-icon {
-                /* turns it white */
-                filter: grayscale(1) brightness(1000%);
-            }
-        }
-    }
-}
 
 /*-- -------------------------- -->
 <---     Desktop Navigation     -->
@@ -835,16 +716,15 @@
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #cs-navigation {
-        z-index: 10000;
-        position: fixed;
         background-color: #fff;
-        width: 100%;
-        /* prevents padding from affecting height and width */
-        box-sizing: border-box;
-        padding: 0 calc(16 / 16 * 1rem);
-        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        box-sizing: border-box;
+        font-family: "Poppins-Regular", sans-serif;
+        padding: 0 calc(16 / 16 * 1rem);
+        position: fixed;
+        text-transform: uppercase;
+        width: 100%;
+        z-index: 10000;
 
         .cs-container {
             display: flex;
@@ -869,7 +749,7 @@
             margin: 0 auto 0 0;
             height: calc(65 / 16 * 1rem);
             max-width: calc(350 / 16 * 1rem);
-            width: 18.4%;
+            width: 100%;
             padding: 0;
 
             img {
@@ -936,30 +816,6 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 64rem) {
-    body.dark-mode {
-        #cs-navigation {
-            background-color: var(--dark);
-
-            .cs-logo {
-                /* makes it turn white */
-                filter: grayscale(1) brightness(1000%);
-            }
-
-            .cs-li-link {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-li-link {
-                &:before {
-                    background-color: var(--primaryLight);
-                }
-            }
-        }
-    }
-}
-
 /*-- -------------------------- -->
 <---   Interior Page Header     -->
 <--- -------------------------- -*/
@@ -999,8 +855,7 @@
             margin: 0 auto;
             margin-top: calc(70 / 16 * 1rem);
             margin-bottom: calc(30 / 16 * 1rem);
-            max-width: calc(500 / 16 * 1rem);
-            width: 96%;
+            width: 100%;
             font-size: calc(64 / 30 * 1rem);
             color: #fff;
             text-align: center;
@@ -1011,7 +866,7 @@
             margin: auto;
             margin-bottom: calc(30 / 16 * 1rem);
             max-width: calc(400 / 16 * 1rem);
-            width: 96%;
+            width: 100%;
             color: #fff;
             text-align: center;
         }
@@ -1022,7 +877,7 @@
             top: 0;
             left: 0;
             content: "";
-            opacity: 0.7;
+            opacity: 0.4;
             display: block;
             background: #000;
             height: 100%;
@@ -1141,7 +996,7 @@
         picture {
             left: 50%;
             transform: translateX(-50%);
-            width: 90.0625%;
+            width: 100%;
 
             &:before {
                 z-index: 1;
@@ -1149,7 +1004,7 @@
                 top: 0;
                 left: 0;
                 content: "";
-                opacity: 0.7;
+                opacity: 0.5;
                 display: block;
                 background: #000;
                 height: 100%;
@@ -1159,33 +1014,7 @@
         &:before {
             display: none;
         }
-        &:after {
-            z-index: -3;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            content: "";
-            opacity: 1;
-            transform: translateX(-50%);
-            display: block;
-            background: url("/assets/svgs/cta-squares.svg");
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: calc(1108 / 16 * 1rem);
-            width: calc(2000 / 16 * 1rem);
-        }
-    }
-}
 
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #cta {
-            &:after {
-                display: none;
-            }
-        }
     }
 }
 
@@ -1309,8 +1138,7 @@
 
             .cs-button-solid {
                 margin: 0;
-                height: calc(53 / 16 * 1rem);
-                width: calc(250 / 16 * 1rem);
+                width: max-content;
                 padding-top: calc(3 / 16 * 1rem);
             }
         }
@@ -1363,9 +1191,15 @@
             text-align: left;
 
             .logo {
+                height: auto;
                 margin-left: 0;
-                height: calc(40 / 16 * 1rem);
                 text-align: left;
+                width: 100%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
             }
 
             p {
@@ -1429,15 +1263,6 @@
             .copyright {
                 display: inline-block;
             }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #footer {
-            background: #061623;
         }
     }
 }

@@ -1,0 +1,106 @@
+---
+title: 'Massage'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'massage/'
+eleventyNavigation:
+    key: Massage
+    order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/massage.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">MASSAGE</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/massage.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/massage.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/massage.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1666">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/massage-2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/massage-2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/massage-2.jpg" alt="people standing" width="605" height="690">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Services</span>
+            <h2 class="cs-title">MASSAGE THERAPY SERVICES</h2>
+            <p class="cs-text">
+                Richard is a certified massage therapist with over X years of experience. Offering personalized massage therapy sessions, benefit from his expertise as he addresses your unique needs, whether it's relieving muscle tension or promoting deep relaxation. Experience the rejuvenating effects of therapeutic touch in our serene and professional environment.
+            </p>
+            <ul class="cs-faq-group">
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Swedish Massage
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        A classic massage technique focusing on relaxation and stress relief by using long, flowing strokes, kneading, and gentle circular movements.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Deep Tissue Massage
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        This therapeutic massage targets deeper layers of muscle and connective tissue to alleviate chronic muscle tension, improve posture, and promote recovery from injuries.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Sports Massage
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Tailored for athletes and active individuals, sports massage techniques aim to enhance athletic performance, prevent injuries, and speed up recovery by focusing on specific muscle groups related to the client's sport or activity.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Aromatherapy Massage
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        This holistic massage combines the benefits of massage therapy with the use of essential oils extracted from plants to enhance relaxation, reduce stress, alleviate pain, and promote overall well-being through aromas and inhalation.
+                    </p>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">Schedule an Appointment</a>
+        </div>
+    </div>
+</section>
+                                
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}
