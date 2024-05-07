@@ -1,15 +1,14 @@
 {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "Hensgen Haus of Wellness",
+    "email": "info@hensgenhausofwellness.com",
+    "phoneForTel": "555-555-5555",
+    "phoneFormatted": "(555) 555-5555",
     "address": {
-        "lineOne": "A New Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+        "lineOne": "123 ABC St",
+        "city": "Janesville",
+        "state": "WI",
+        "zip": "53546",
+        "mapLink": "/"
     },
-    "domain": "https://www.codestitch.app"
+    "domain": "https://www.hensegenhausofwellness.com"
 }

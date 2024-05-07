@@ -6,7 +6,7 @@
   #hero-1619 {
     padding: var(--sectionPadding);
     /* 200px - 300px - leaving extra space for the navigation */
-    padding-top: clamp(12.5rem, 31.95vw, 18.75rem);
+    padding-top: clamp(12.5rem, 3vw, 16rem);
     position: relative;
     z-index: 1;
   }
@@ -35,7 +35,7 @@
   #hero-1619 .cs-content p {
     color: var(--white);
     font: clamp(16px, 4vw, 18px)/calc(1em + 6px) "Poppins-Regular", sans-serif;
-    max-width: 50%;
+    max-width: 100%;
     margin-bottom: 30px;
   }
   #hero-1619 .cs-content p span {
@@ -70,6 +70,7 @@
   #hero-1619 .cs-topper .desc {
     font-weight: 100;
     font-size: 14px;
+    text-wrap: balance;
   }
   #hero-1619 .cs-chevron {
     --chevronColor: var(--primary);
@@ -188,7 +189,7 @@
     height: 100%;
     object-fit: cover;
     /* makes the top of the image start at the top of the parent */
-    object-position: top;
+    object-position: right;
     position: absolute;
     top: 0;
     left: 0;
@@ -216,6 +217,9 @@
   #hero-1619 .cs-background:before {
     background: linear-gradient(90deg, #111926 21.41%, rgba(17, 25, 38, 0.72) 60%, rgba(17, 25, 38, 0) 100%);
     opacity: 1;
+  }
+  #hero-1619 .cs-content p {
+    max-width: 50%;
   }
 }
 /* Large Desktop - 1300px */
