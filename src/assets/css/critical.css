@@ -44,6 +44,14 @@
   #hero-1619 .cs-content .buttons {
     display: flex;
     gap: 15px;
+    justify-content: center;
+    width: 100%;
+  }
+  #hero-1619 .cs-content .cs-button-outline {
+    margin: 0;
+  }
+  #hero-1619 .cs-content .cs-button-solid {
+    margin: 0;
   }
   #hero-1619 .cs-topper {
     /* 13px - 16px */

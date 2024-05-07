@@ -49,10 +49,17 @@
             .buttons {
                 display: flex;
                 gap: 15px;
+                justify-content: center;
+                width: 100%;
             }
 
             .cs-button-outline {
+                margin: 0;
+            }
 
+
+            .cs-button-solid {
+                margin: 0;
             }
         }
 
