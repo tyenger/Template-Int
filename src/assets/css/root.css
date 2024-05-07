@@ -378,6 +378,7 @@
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     line-height: 1.2em;
     color: var(--headerColor);
+    text-transform: uppercase;
   }
   #cs-navigation .cs-li-link:before {
     position: absolute;

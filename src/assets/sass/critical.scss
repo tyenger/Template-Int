@@ -7,7 +7,7 @@
     #hero-1619 {
         padding: var(--sectionPadding);
         /* 200px - 300px - leaving extra space for the navigation */
-        padding-top: clamp(12.5rem, 3vw, 16rem);
+        padding-top: clamp(8.5rem, 4vw, 18rem);
         position: relative;
         z-index: 1;
 
@@ -212,7 +212,7 @@
             }
 
             img {
-                width: 100%;
+                width: 130%;
                 height: 100%;
                 object-fit: cover;
                 /* makes the top of the image start at the top of the parent */
@@ -253,6 +253,10 @@
                     rgba(17, 25, 38, 0) 100%
                 );
                 opacity: 1;
+            }
+
+            img {
+                width: 100%;
             }
         }
 
