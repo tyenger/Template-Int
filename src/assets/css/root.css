@@ -22,6 +22,13 @@
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   }
+  a:not(.cs-button-solid) {
+    color: var(--primary);
+    transition: color 0.3s;
+  }
+  a:not(.cs-button-solid):hover {
+    color: var(--black);
+  }
   .cs-topper {
     display: block;
     margin-bottom: 30px;
@@ -635,7 +642,7 @@
     align-items: center;
     /* margin-right auto pushes everything away from it to the right */
     margin: 0 auto 0 0;
-    height: 4.0625rem;
+    height: 100%;
     max-width: 21.875rem;
     width: 100%;
     padding: 0;
@@ -770,7 +777,7 @@
     background-attachment: fixed;
     min-height: 18.75rem;
     height: auto;
-    padding-top: 11.25rem;
+    padding-top: 5.625rem;
     font-size: inherit;
     padding-block-end: 6.25rem;
   }
@@ -782,7 +789,7 @@
 @media only screen and (min-width: 0em) {
   #cta {
     position: relative;
-    padding: 3.125rem 0;
+    padding: 2.5rem;
   }
   #cta .container {
     text-align: center;
@@ -837,14 +844,14 @@
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #cta {
-    padding: 10.5rem 0;
+    padding: 2.5rem;
   }
 }
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
   #cta {
     position: relative;
-    margin-top: 6.25rem;
+    margin-top: 15px;
   }
   #cta .container {
     margin: auto;

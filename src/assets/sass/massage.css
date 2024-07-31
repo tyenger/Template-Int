@@ -17,11 +17,18 @@
   #services-1666 .cs-container {
     width: 100%;
     /* changes to 1280px at small desktop */
-    max-width: 36.5rem;
+    max-width: calc(584 / 16 * 1rem);
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     /* 40px - 64px */
     gap: clamp(2.5rem, 3.9vw, 4rem);
   }
@@ -33,7 +40,7 @@
   }
   #services-1666 .cs-picture {
     width: 100%;
-    min-height: 20.5rem;
+    min-height: calc(328 / 16 * 1rem);
     display: block;
     position: relative;
   }
@@ -43,25 +50,37 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #services-1666 .cs-floater {
     width: clamp(20.125rem, 40vw, 28.1875rem);
     height: clamp(20.1875rem, 40vw, 28.25rem);
     position: absolute;
-    bottom: 0rem;
+    bottom: calc(0 / 16 * 1rem);
     z-index: 1;
     mix-blend-mode: soft-light;
   }
   #services-1666 .cs-content {
     text-align: left;
     width: 100%;
-    max-width: 40.625rem;
+    max-width: calc(650 / 16 * 1rem);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    flex: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
   #services-1666 .cs-title {
     /* 16px - 24px */
@@ -77,10 +96,19 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     /* 16px - 20px */
     gap: clamp(1rem, 2.4vw, 1.25rem);
   }
@@ -90,28 +118,28 @@
     background-color: transparent;
     border: 1px solid #e8e8e8;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: border-bottom 0.3s;
     transition: border-bottom 0.3s;
   }
   #services-1666 .cs-faq-item.active .cs-indicator:before {
-    transform: translate(-50%, -50%) rotate(360deg);
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
   }
   #services-1666 .cs-faq-item.active .cs-indicator:after {
-    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
   }
   #services-1666 .cs-faq-item.active .cs-item-p {
     height: auto;
-    padding-top: 1rem;
+    padding-top: calc(16 / 16 * 1rem);
     opacity: 1;
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
   #services-1666 .cs-faq-item:hover {
     cursor: pointer;
-  }
-  #services-1666 .massage-btn {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
   }
   #services-1666 .cs-button {
     /* 16px - 20px */
@@ -120,33 +148,40 @@
     text-align: left;
     font-weight: bold;
     width: 100%;
-    padding: 1rem 1rem 0 1rem;
+    padding: calc(16 / 16 * 1rem) calc(16 / 16 * 1rem) 0 calc(16 / 16 * 1rem);
     border: none;
     background: transparent;
     color: var(--headerColor);
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     /* 16px - 24px */
     gap: clamp(1rem, 2.5vw, 1.5rem);
     position: relative;
+    -webkit-transition: background-color 0.3s, color 0.3s;
     transition: background-color 0.3s, color 0.3s;
   }
   #services-1666 .cs-button:hover {
     cursor: pointer;
   }
   #services-1666 .cs-indicator {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: calc(24 / 16 * 1rem);
+    height: calc(24 / 16 * 1rem);
     position: relative;
     z-index: 1;
   }
   #services-1666 .cs-indicator:before {
     /* left line */
-    content: "";
-    width: 1rem;
-    height: 0.125rem;
+    content: '';
+    width: calc(16 / 16 * 1rem);
+    height: calc(2 / 16 * 1rem);
     background-color: #767676;
     opacity: 1;
     border-radius: 2px;
@@ -154,14 +189,18 @@
     display: block;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.5s;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
   }
   #services-1666 .cs-indicator:after {
     /* right line */
-    content: "";
-    width: 1rem;
-    height: 0.125rem;
+    content: '';
+    width: calc(16 / 16 * 1rem);
+    height: calc(2 / 16 * 1rem);
     background-color: #767676;
     opacity: 1;
     border-radius: 2px;
@@ -169,8 +208,12 @@
     display: block;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
-    transition: transform 0.5s;
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+            transform: translate(-50%, -50%) rotate(90deg);
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
   }
   #services-1666 .cs-button-text {
     width: 90%;
@@ -178,26 +221,28 @@
     display: block;
   }
   #services-1666 .cs-item-p {
-    font-size: 0.875rem;
+    font-size: calc(14 / 16 * 1rem);
     line-height: 1.5em;
     width: 100%;
     max-width: none;
     height: 0;
     margin: 0;
     /* 16px - 24px */
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 calc(16 / 16 * 1rem) calc(16 / 16 * 1rem) calc(16 / 16 * 1rem);
     /* prevents padding and border from affecting height and width */
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     opacity: 0;
     color: var(--bodyTextColor);
     /* clips the text so it doesn't show up */
     overflow: hidden;
     position: relative;
+    -webkit-transition: opacity 0.3s, padding-bottom 0.3s, padding-top 0.3s;
     transition: opacity 0.3s, padding-bottom 0.3s, padding-top 0.3s;
   }
   #services-1666 .cs-icon {
-    width: 2rem;
-    height: 2rem;
+    width: calc(32 / 16 * 1rem);
+    height: calc(32 / 16 * 1rem);
     display: block;
   }
   #services-1666 .cs-button-solid {
@@ -207,30 +252,39 @@
     margin: 0;
   }
 }
+
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #services-1666 .cs-picture {
     height: 100%;
-    min-width: 36.5rem;
+    min-width: calc(584 / 16 * 1rem);
     width: 48vw;
     right: 0;
     top: 0;
   }
 }
+
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #services-1666 .cs-container {
-    max-width: 80rem;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+    max-width: calc(1280 / 16 * 1rem);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   #services-1666 .cs-content {
     width: 55%;
   }
   #services-1666 .cs-image-group {
     width: 100%;
-    max-width: 33.875rem;
+    max-width: calc(542 / 16 * 1rem);
   }
   #services-1666 .cs-picture {
     width: 100%;
@@ -238,13 +292,13 @@
     max-height: 700px;
   }
   #services-1666 .cs-picture img {
-    object-position: left;
+    -o-object-position: left;
+       object-position: left;
   }
   #services-1666 .cs-floater {
-    width: 28.1875rem;
+    width: calc(451 / 16 * 1rem);
     right: clamp(50%, 18vw, 75%);
-    bottom: -6.25rem;
+    bottom: calc(-100 / 16 * 1rem);
   }
 }
-
 /*# sourceMappingURL=massage.css.map */

@@ -20,7 +20,7 @@
   #cs-contact .cs-container {
     width: 100%;
     /* changes to 1280px at desktop */
-    max-width: 50rem;
+    max-width: calc(800 / 16 * 1rem);
     margin: auto;
   }
   #cs-contact .cs-content {
@@ -33,7 +33,7 @@
   }
   #cs-contact .cs-title {
     text-align: left;
-    max-width: 50rem;
+    max-width: calc(800 / 16 * 1rem);
   }
   #cs-contact .cs-text {
     text-align: left;
@@ -44,10 +44,10 @@
     margin-bottom: clamp(2.5rem, 6.3vw, 3rem);
   }
   #cs-contact #cs-form {
-    margin-bottom: 2.5rem;
+    margin-bottom: calc(40 / 16 * 1rem);
   }
   #cs-contact #cs-form label {
-    font-size: 1rem;
+    font-size: calc(16 / 16 * 1rem);
     font-weight: 700;
     line-height: 1.5em;
     /* 12px - 20px */
@@ -58,14 +58,14 @@
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   #cs-contact #cs-form .cs-label-message {
     /* 32px - 48px */
@@ -73,16 +73,16 @@
   }
   #cs-contact #cs-form input,
   #cs-contact #cs-form textarea {
-    font-size: 1rem;
+    font-size: calc(16 / 16 * 1rem);
     width: 100%;
-    height: 4rem;
-    margin-top: 0.25rem;
+    height: calc(64 / 16 * 1rem);
+    margin-top: calc(4 / 16 * 1rem);
     /* prevents border & padding from affecting height */
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding-left: 1.25rem;
+            box-sizing: border-box;
+    padding-left: calc(20 / 16 * 1rem);
     border: 1px solid #b4b2c7;
-    border-radius: 0.5rem;
+    border-radius: calc(8 / 16 * 1rem);
     -webkit-transition: border 0.3s;
     transition: border 0.3s;
   }
@@ -92,32 +92,32 @@
   }
   #cs-contact #cs-form textarea {
     font-family: inherit;
-    min-height: 7.5rem;
-    padding-top: 1.25rem;
+    min-height: calc(120 / 16 * 1rem);
+    padding-top: calc(20 / 16 * 1rem);
   }
   #cs-contact #cs-form .cs-button-solid {
     width: 100%;
     border: none;
   }
   #cs-contact .cs-right-section {
-    height: 20rem;
+    height: calc(320 / 16 * 1rem);
     /* 24px - 40px top & bottom */
     /* 20px - 40px left & right */
     padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
-    border-radius: 0.5rem;
+    border-radius: calc(8 / 16 * 1rem);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     position: relative;
     /* cuts off corners on img tag */
     overflow: hidden;
@@ -127,7 +127,7 @@
     font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 700;
     line-height: 1.2em;
-    margin-bottom: 0.5rem;
+    margin-bottom: calc(8 / 16 * 1rem);
     color: var(--bodyTextColorWhite);
     display: block;
   }
@@ -136,7 +136,7 @@
     font-size: clamp(1rem, 3vw, 1.25rem);
     line-height: 1.2em;
     text-decoration: none;
-    margin-bottom: 1.25rem;
+    margin-bottom: calc(20 / 16 * 1rem);
     color: var(--bodyTextColorWhite);
     display: block;
     position: relative;
@@ -151,7 +151,7 @@
     opacity: 1;
     display: block;
     position: absolute;
-    bottom: -0.125rem;
+    bottom: calc(-2 / 16 * 1rem);
     left: 0;
     -webkit-transition: width 0.3s;
     transition: width 0.3s;
@@ -197,7 +197,7 @@
     height: 100%;
     /* Makes img tag act as a background image */
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -206,6 +206,7 @@
     color: var(--primary);
   }
 }
+
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75em) {
   #cs-contact #cs-form {
@@ -213,13 +214,13 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #cs-contact #cs-form label {
     width: 48%;
@@ -228,63 +229,66 @@
     width: 100%;
   }
 }
+
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64em) {
   #cs-contact .cs-container {
-    max-width: 80rem;
+    max-width: calc(1280 / 16 * 1rem);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    gap: 5rem;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: calc(80 / 16 * 1rem);
   }
   #cs-contact #cs-form {
-    max-width: 39.375rem;
+    max-width: calc(630 / 16 * 1rem);
   }
   #cs-contact #cs-form label {
     width: 100%;
   }
   #cs-contact .cs-right-section {
     width: 40%;
-    max-width: 33.875rem;
+    max-width: calc(542 / 16 * 1rem);
     /* changes to 578px at 1300px wide */
-    height: 42.875rem;
+    height: calc(686 / 16 * 1rem);
     /* prevents flexbox from squishing it */
     -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
+        -ms-flex: none;
+            flex: none;
   }
   #cs-contact .cs-right-section:hover .cs-bg-picture {
     -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+            transform: scale(1.1);
   }
   #cs-contact .cs-block {
     /* goes back to inline so it stays "in line" with the rest of the text */
     display: inline-block;
   }
 }
+
 /* Small Desktop - 1300px */
 @media only screen and (min-width: 81.25em) {
   #cs-contact #cs-form {
-    -webkit-column-gap: 0rem;
-    column-gap: 0rem;
+    -webkit-column-gap: calc(0 / 16 * 1rem);
+            column-gap: calc(0 / 16 * 1rem);
   }
   #cs-contact #cs-form label {
     width: 48%;
-    max-width: 19.0625rem;
+    max-width: calc(305 / 16 * 1rem);
   }
   #cs-contact #cs-form .cs-label-message {
     max-width: 100%;
   }
   #cs-contact .cs-right-section {
-    height: 36.125rem;
+    height: calc(578 / 16 * 1rem);
   }
 }
+
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #cs-contact .cs-text,
@@ -302,7 +306,7 @@
   body.dark-mode #cs-contact #cs-form textarea::-webkit-input-placeholder {
     /* lighten up the color of the text by 40%*/
     -webkit-filter: brightness(1.4);
-    filter: brightness(1.4);
+            filter: brightness(1.4);
   }
   body.dark-mode #cs-contact #cs-form label:-ms-input-placeholder,
   body.dark-mode #cs-contact #cs-form input:-ms-input-placeholder,
@@ -321,7 +325,7 @@
   body.dark-mode #cs-contact #cs-form textarea::placeholder {
     /* lighten up the color of the text by 40%*/
     -webkit-filter: brightness(1.4);
-    filter: brightness(1.4);
+            filter: brightness(1.4);
   }
   body.dark-mode #cs-contact .cs-bg-picture {
     background-color: #000;
@@ -331,6 +335,4 @@
     opacity: 0.5;
   }
 }
-
-
 /*# sourceMappingURL=contact.css.map */

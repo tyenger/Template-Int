@@ -11,7 +11,7 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/life-coach.css">
+    <link rel="stylesheet" href="/assets/css/coaching.css">
 {% endblock %}
 
 {% block body %}
@@ -21,9 +21,58 @@ eleventyNavigation:
 
     <section id="int-hero">
         <h1 id="home-h">Health & Life Coaching</h1>
-
-
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/coaching.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/coaching.webp">
+            <img aria-hidden="true" decoding="async" src="/assets/images/coaching.webp" alt="coaching" loading="eager">
+        </picture>
     </section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-989">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-name">Health Coaching</span>
+                    <span class="cs-desc"></span>
+                    <p class="cs-item-text">
+                        Do you need help implementing lifestyle changes to improve your physical health? Look no further. Have a Professional Athlete as your personal Health Coach, to guide you along the way. Richard can help you address six key areas that affect wellness, which includes:
+                    </p>
+                    <ul>
+                        <li>Smoking</li>
+                        <li>Stress</li>
+                        <li>Nutrition</li>
+                        <li>Sleep</li>
+                        <li>Activity</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-name">Life Coaching</span>
+                    <span class="cs-desc"></span>
+                    <p class="cs-item-text">
+                        Do you need to make progress in your life in order to attain greater fulfillment? Do you need help improving in your relationships, career, and your day-to-day life? Here are just some of the areas that Richard can assist you in:
+                    </p>
+                    <ul>
+                        <li>Frequent Irritability</li>
+                        <li>High Stress and/or Anxiety Levels</li>
+                        <li>Inability to break bad habits</li>
+                        <li>Lack of fulfillment in your social life</li>
+                        <li>Persistent feeling of dissatisfaction at work</li>
+                        <li>Sense of blocked creativity</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
 
     {% include 'components/cta.html' %}
 

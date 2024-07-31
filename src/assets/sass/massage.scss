@@ -127,6 +127,12 @@
                 cursor: pointer;
             }
         }
+
+        .massage-btn {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
     
         .cs-button {
             /* 16px - 20px */
