@@ -39,3 +39,19 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         }
         item.addEventListener('click', onClick)
         }
+
+		document.querySelector('.cs-dropdown > a').addEventListener('click', function(e) {
+			e.preventDefault(); // Prevent the default link behavior
+		
+			const targetElement = document.querySelector('#services');
+			const offset = 100; // 100px offset from the top
+		
+			// Calculate the scroll position
+			const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+		
+			// Smooth scroll to the position
+			window.scrollTo({
+				top: targetPosition,
+				behavior: 'smooth'
+			});
+		});

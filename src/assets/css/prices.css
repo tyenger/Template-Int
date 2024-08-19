@@ -100,16 +100,18 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    white-space: nowrap;
   }
   #pricing-975 .cs-subhead {
-    font-size: 16px;
+    font-size: 14px;
     text-align: inherit;
     max-width: 25rem;
     padding-right: 0.5rem;
     color: var(--headerColor);
-    background-color: #fff;
     display: flex;
     flex-direction: column;
+    font-weight: 100;
+    font-style: italic;
   }
   #pricing-975 .cs-price {
     font-size: 1rem;
@@ -119,6 +121,7 @@
     color: var(--headerColor);
     background-color: #fff;
     text-align: right;
+    white-space: nowrap;
   }
   #pricing-975 .cs-menu-text {
     font-size: 1rem;

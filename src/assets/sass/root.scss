@@ -1,14 +1,11 @@
-/* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
-
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
 
-/* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
-    // Website colors
     :root {
         --primary: #2c72a4;
+        --primaryLighter: #5ea3d4;
         --primaryLight: #757575;
         --black: #000;
         --secondary: #001f3f;
@@ -28,16 +25,10 @@
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
 
-    a:not(.cs-button-solid) {
-        color: var(--primary);
-        transition: color 0.3s;
-
-        &:hover {
-            color: var(--black);
-        }
+    html {
+        scroll-behavior: smooth;
     }
 
-    // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
     .cs-topper {
         display: block;
         margin-bottom: 30px;
@@ -72,7 +63,6 @@
         font-size: calc(16 / 16 * 1rem);
         font-weight: 700;
         line-height: clamp(2.875rem, 8vw, 3.5rem);
-        margin: auto;
         padding: 0 calc(24 / 16 * 1rem);
         position: relative;
         text-decoration: none;
@@ -89,7 +79,7 @@
     
     .cs-button-outline {
         background-color: transparent;
-        border: 1px solid var(--primary);
+        border: 2px solid var(--primary);
         border-radius: 4px;
         color: #fff;
         display: inline-block;
@@ -106,7 +96,7 @@
         
         &:hover {
             background-color: var(--primaryLight);
-            border: 1px solid var(--primaryLight);
+            border: 2px solid var(--primaryLight);
         }
     }
     
@@ -296,7 +286,8 @@
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
                 /* places the image to the left edge of the parent */
-                object-position: left;
+                object-position: left;   
+                transition: opacity 0.3s;             
             }
         }
 
@@ -451,7 +442,7 @@
             margin: 0;
             text-decoration: none;
             /* 16px - 24px */
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-size: clamp(1rem, 2.5vw, 2rem);
             line-height: 1.2em;
             color: var(--headerColor);
             text-transform: uppercase;
@@ -586,7 +577,7 @@
         .cs-li-link {
             &.cs-drop-link {
                 /* 14px - 16px */
-                font-size: clamp(0.875rem, 2vw, 1.25rem);
+                font-size: clamp(0.875rem, 2vw, 2rem);
                 color: #fff;
             }
         }
@@ -762,11 +753,16 @@
             width: 100%;
             padding: 0;
 
+            &:hover img {
+                opacity: 0.8;
+            }
+
             img {
                 height: 100%;
                 width: 100%;
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
+                transition: opacity 0.3s;
             }
         }
 
@@ -794,7 +790,7 @@
             margin: 0;
             text-decoration: none;
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 1vw, 1rem);
+            font-size: clamp(0.875rem, 2vw, 1.1rem);
             line-height: 1.5em;
             color: var(--bodyTextColor);
             &:hover {
@@ -915,7 +911,7 @@
         height: auto;
         padding-top: calc(90 / 16 * 1rem);
         font-size: inherit;
-        padding-block-end: calc(100 / 16 * 1rem);
+        padding-block-end: calc(50 / 16 * 1rem);
     }
 }
 
@@ -927,7 +923,7 @@
 @media only screen and (min-width: 0em) {
     #cta {
         position: relative;
-        padding: 2.5rem;
+        padding: 1.5rem;
 
         .container {
             text-align: center;
@@ -989,7 +985,7 @@
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
     #cta {
-        padding: 2.5rem;
+        padding: 1.5rem;
     }
 }
 
@@ -1047,14 +1043,18 @@
                 display: inline-block;
                 margin: auto;
                 margin-bottom: calc(30 / 16 * 1em);
-                height: calc(32 / 16 * 1em);
                 width: auto;
                 text-align: center;
-
+                
+                &:hover img {
+                    opacity: 0.8;
+                }
+                
                 img {
                     display: block;
                     height: 100%;
-                    width: auto;
+                    transition: opacity 0.3s;
+                    width: 100%;
                 }
             }
 
@@ -1074,6 +1074,27 @@
             margin: auto;
             max-width: calc(407 / 16 * 1rem);
             width: 96%;
+            h4 {
+                position: relative;
+                margin-bottom: calc(37 / 16 * 1rem);
+                text-transform: uppercase;
+                font-size: calc(18 / 16 * 1rem);
+                line-height: calc(21 / 18 * 1em);
+                font-weight: bold;
+                color: #fff;
+
+                &:before {
+                    position: absolute;
+                    bottom: calc(-16 / 16 * 1rem);
+                    left: 0;
+                    content: "";
+                    opacity: 1;
+                    display: block;
+                    background: var(--primary);
+                    height: calc(2 / 16 * 1rem);
+                    width: calc(97 / 16 * 1rem);
+                }
+            }
             .lists {
                 display: flex;
                 flex-wrap: wrap;
@@ -1099,31 +1120,11 @@
                             color: #fff;
                             transition: color 0.3s;
                             &:hover {
-                                color: var(--primary);
+                                color: var(--primaryLighter);
                             }
                         }
                     }
-                    h2 {
-                        position: relative;
-                        margin-bottom: calc(37 / 16 * 1rem);
-                        text-transform: uppercase;
-                        font-size: calc(18 / 16 * 1rem);
-                        line-height: calc(21 / 18 * 1em);
-                        font-weight: bold;
-                        color: #fff;
-
-                        &:before {
-                            position: absolute;
-                            bottom: calc(-16 / 16 * 1rem);
-                            left: 0;
-                            content: "";
-                            opacity: 1;
-                            display: block;
-                            background: var(--primary);
-                            height: calc(2 / 16 * 1rem);
-                            width: calc(97 / 16 * 1rem);
-                        }
-                    }
+                    
 
                     &:nth-of-type(3) {
                         margin-top: calc(50 / 16 * 1rem);
@@ -1139,6 +1140,11 @@
                         }
                     }
                 }
+            }
+
+            .quick-links {
+                column-count: 2;
+                column-gap: 30px;
             }
 
             .buttons {
@@ -1187,6 +1193,7 @@
         .container {
             display: flex;
             flex-direction: row;
+            gap: 30px;
             flex-wrap: nowrap;
             justify-content: space-between;
             margin: auto;

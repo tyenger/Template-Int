@@ -1,13 +1,13 @@
 ---
-title: Sample Test
+title: "Flyer "
 description: Lorem markdownum tardantis unam mitissima dissimulator
   inposuit   corpus sintque tura tremenda, nec coetum.
-author: Code Stitch
-date: 2023-06-08T15:26:46.705Z
+author: Richard Hensgen
+date: 2024-01-01T01:01:00.000Z
 tags:
   - post
-image: /assets/images/blog/landing.jpg
-imageAlt: Kitchen
+image: /assets/images/blog/you-can-be-a-champion-pro-3.jpg
+imageAlt: Flyer
 ---
 
 ## Lacerans aliter tetigit praeterea rite

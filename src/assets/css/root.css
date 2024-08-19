@@ -1,11 +1,10 @@
-/* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
-/* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
   :root {
     --primary: #2c72a4;
+    --primaryLighter: #5ea3d4;
     --primaryLight: #757575;
     --black: #000;
     --secondary: #001f3f;
@@ -22,12 +21,8 @@
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   }
-  a:not(.cs-button-solid) {
-    color: var(--primary);
-    transition: color 0.3s;
-  }
-  a:not(.cs-button-solid):hover {
-    color: var(--black);
+  html {
+    scroll-behavior: smooth;
   }
   .cs-topper {
     display: block;
@@ -60,7 +55,6 @@
     font-size: 1rem;
     font-weight: 700;
     line-height: clamp(2.875rem, 8vw, 3.5rem);
-    margin: auto;
     padding: 0 1.5rem;
     position: relative;
     text-decoration: none;
@@ -75,7 +69,7 @@
   }
   .cs-button-outline {
     background-color: transparent;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     border-radius: 4px;
     color: #fff;
     display: inline-block;
@@ -92,7 +86,7 @@
   }
   .cs-button-outline:hover {
     background-color: var(--primaryLight);
-    border: 1px solid var(--primaryLight);
+    border: 2px solid var(--primaryLight);
   }
 }
 /* Fonts and general styles */
@@ -246,6 +240,7 @@
     object-fit: contain;
     /* places the image to the left edge of the parent */
     object-position: left;
+    transition: opacity 0.3s;
   }
   #cs-navigation .cs-toggle {
     display: flex;
@@ -382,7 +377,7 @@
     margin: 0;
     text-decoration: none;
     /* 16px - 24px */
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 2rem);
     line-height: 1.2em;
     color: var(--headerColor);
     text-transform: uppercase;
@@ -492,7 +487,7 @@
   }
   #cs-navigation .cs-li-link.cs-drop-link {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    font-size: clamp(0.875rem, 2vw, 2rem);
     color: #fff;
   }
 }
@@ -647,11 +642,15 @@
     width: 100%;
     padding: 0;
   }
+  #cs-navigation .cs-logo:hover img {
+    opacity: 0.8;
+  }
   #cs-navigation .cs-logo img {
     height: 100%;
     width: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
+    transition: opacity 0.3s;
   }
   #cs-navigation .cs-ul {
     display: flex;
@@ -675,7 +674,7 @@
     margin: 0;
     text-decoration: none;
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1vw, 1rem);
+    font-size: clamp(0.875rem, 2vw, 1.1rem);
     line-height: 1.5em;
     color: var(--bodyTextColor);
   }
@@ -779,7 +778,7 @@
     height: auto;
     padding-top: 5.625rem;
     font-size: inherit;
-    padding-block-end: 6.25rem;
+    padding-block-end: 3.125rem;
   }
 }
 /*-- -------------------------- -->
@@ -789,7 +788,7 @@
 @media only screen and (min-width: 0em) {
   #cta {
     position: relative;
-    padding: 2.5rem;
+    padding: 1.5rem;
   }
   #cta .container {
     text-align: center;
@@ -844,7 +843,7 @@
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
   #cta {
-    padding: 2.5rem;
+    padding: 1.5rem;
   }
 }
 /* Large Desktop */
@@ -897,14 +896,17 @@
     display: inline-block;
     margin: auto;
     margin-bottom: 1.875em;
-    height: 2em;
     width: auto;
     text-align: center;
+  }
+  #footer .left-section .logo:hover img {
+    opacity: 0.8;
   }
   #footer .left-section .logo img {
     display: block;
     height: 100%;
-    width: auto;
+    transition: opacity 0.3s;
+    width: 100%;
   }
   #footer .left-section p {
     opacity: 0.9;
@@ -920,6 +922,26 @@
     margin: auto;
     max-width: 25.4375rem;
     width: 96%;
+  }
+  #footer .right-section h4 {
+    position: relative;
+    margin-bottom: 2.3125rem;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    line-height: 1.1666666667em;
+    font-weight: bold;
+    color: #fff;
+  }
+  #footer .right-section h4:before {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    content: "";
+    opacity: 1;
+    display: block;
+    background: var(--primary);
+    height: 0.125rem;
+    width: 6.0625rem;
   }
   #footer .right-section .lists {
     display: flex;
@@ -948,27 +970,7 @@
     transition: color 0.3s;
   }
   #footer .right-section .lists ul li a:hover {
-    color: var(--primary);
-  }
-  #footer .right-section .lists ul h2 {
-    position: relative;
-    margin-bottom: 2.3125rem;
-    text-transform: uppercase;
-    font-size: 1.125rem;
-    line-height: 1.1666666667em;
-    font-weight: bold;
-    color: #fff;
-  }
-  #footer .right-section .lists ul h2:before {
-    position: absolute;
-    bottom: -1rem;
-    left: 0;
-    content: "";
-    opacity: 1;
-    display: block;
-    background: var(--primary);
-    height: 0.125rem;
-    width: 6.0625rem;
+    color: var(--primaryLighter);
   }
   #footer .right-section .lists ul:nth-of-type(3) {
     margin-top: 3.125rem;
@@ -981,6 +983,10 @@
   }
   #footer .right-section .lists ul:nth-of-type(3) li:last-of-type {
     margin-bottom: 0;
+  }
+  #footer .right-section .quick-links {
+    column-count: 2;
+    column-gap: 30px;
   }
   #footer .right-section .buttons {
     display: flex;
@@ -1021,6 +1027,7 @@
   #footer .container {
     display: flex;
     flex-direction: row;
+    gap: 30px;
     flex-wrap: nowrap;
     justify-content: space-between;
     margin: auto;

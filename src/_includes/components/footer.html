@@ -9,57 +9,48 @@
         </div>
         <div class="right-section">
             <div class="lists">
-                <ul>
-                    <li>
-                        <h2>Information</h2>
-                    </li>
-                    <li>
-                        <a href="/massage">Massage</a>
-                    </li>
-                    <li>
-                        <a href="/speaking">Motivational Speaking</a>
-                    </li>
-                    <li>
-                        <a href="/personal-training">Personal Training</a>
-                    </li>
-                    <li>
-                        <a href="/coaching">Coaching</a>
-                    </li>
-                    <li>
-                        <a href="/fees-for-service">Fees for Service</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Follow Us</h2>
-                    </li>
-                    <li>Social1</li>
-                    <li>Social2</li>
-                    <li>Social3</li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Contact</h2>
-                    </li>
-                    <li>
-                        <a href="/contact">
-                            {{client.address.lineOne}}<br>
-                            {{client.address.lineTwo}}<br>
-                            {{client.address.city}}
-                            {{client.address.state}}
-                            {{client.address.zip}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:{{client.phoneForTel}}">
-                            T:
-                            {{client.phoneFormatted}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:{{client.email}}">Click to Email</a>
-                    </li>
-                </ul>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="quick-links">
+                        <li>
+                            <a href="/services/speaking">Motivational Speaking</a>
+                        </li>
+                        <li>
+                            <a href="/services/coaching">Coaching</a>
+                        </li>
+                        <li>
+                            <a href="/services/personal-training">Personal Training</a>
+                        </li>
+                        <li>
+                            <a href="/services/massage">Massage</a>
+                        </li>
+                        <li>
+                            <a href="/fees-for-service">Fees for Service</a>
+                        </li>
+                        <li>
+                            <a href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <a href="/contacts">
+                                Janesville, WI 53546
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:{{client.phoneForTel}}">
+                                {{client.phoneFormatted}}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:{{client.email}}">Click to Email</a>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
     </div>

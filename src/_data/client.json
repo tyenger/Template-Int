@@ -1,14 +1,12 @@
 {
     "name": "Hensgen Haus of Wellness",
-    "email": "info@hensgenhausofwellness.com",
-    "phoneForTel": "555-555-5555",
-    "phoneFormatted": "(555) 555-5555",
+    "email": "rdhensgen@hotmail.com",
+    "phoneForTel": "608-219-7849",
+    "phoneFormatted": "(608) 219-7849",
     "address": {
-        "lineOne": "123 ABC St",
         "city": "Janesville",
         "state": "WI",
-        "zip": "53546",
-        "mapLink": "/"
+        "zip": "53546"
     },
-    "domain": "https://www.hensegenhausofwellness.com"
+    "domain": "https://www.hensegenshausofwellness.com"
 }
