@@ -1,7 +1,7 @@
 ---
 title: 'Blog'
 description: 'Meta description for the page'
-preloadImg: '/assets/images/coaching.webp'
+preloadImg: '/assets/images/blue.webp'
 permalink: 'blog/'
 eleventyNavigation:
     key: Blog
@@ -21,6 +21,11 @@ eleventyNavigation:
 
     <section id="int-hero">
         <h1 id="home-h">Blog</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/blue.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/blue.webp">
+            <img aria-hidden="true" decoding="async" src="/assets/images/blue.webp" alt="blue" loading="eager">
+        </picture>
     </section>
 
     <!-- ============================================ -->
@@ -50,21 +55,6 @@ eleventyNavigation:
                         </picture>
                         <!--Article Info-->
                         <div class="article-group">
-                            <div class="blog-authorGroup">
-                                <!--Author Image-->
-                                <picture class="blog-author-img">
-                                    <img
-                                    src="/assets/svgs/profile.svg"
-                                    alt="house"
-                                    width="32"
-                                    height="32"
-                                    decoding="async" />
-                                </picture>
-                                <span class="blog-author">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="blog-dot"></span>
-                                <!--Blog Date-->
-                                <span class="blog-date">{{ post.date | postDate }}</span>
-                            </div>
                             <h2 class="blog-h1">
                                 {{ post.data.title }}
                             </h2>

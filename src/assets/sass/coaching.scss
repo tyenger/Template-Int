@@ -19,6 +19,10 @@
             gap: clamp(3rem, 6vw, 4rem);
         }
 
+        .cta-btn {
+            margin-top: 15px;
+        }
+
         .cs-content {
             /* set text align to left if content needs to be left aligned */
             text-align: center;
@@ -77,9 +81,11 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
         }
 
         .cs-item {
+            padding: 15px;
             list-style: none;
             width: 100%;
             grid-column: span 12;
@@ -100,6 +106,10 @@
             justify-content: center;
             flex-direction: column;
             align-items: flex-start;
+
+            ul {
+                margin-left: 15px;
+            }
         }
 
         .cs-name {
@@ -173,6 +183,8 @@
             justify-content: space-between;
             align-items: stretch;
             gap: 50px;
+            flex-wrap: nowrap;
+
 
             ul {
                 padding-left: 30px;

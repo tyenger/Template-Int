@@ -5,7 +5,7 @@ author: " "
 date: 2024-01-01T01:01:00.000Z
 tags:
   - post
-image: /assets/images/blog/you-can-be-a-champion-pro-3.jpg
+image: /assets/images/blog/health.webp
 imageAlt: Flyer
 ---
 Richard's path to becoming a professional natural bodybuilder is a story of incredible perseverance and strength. On February 28, 2020, his life took a sudden turn when he suffered a traumatic brain injury that left him paralyzed. Most people would have been overwhelmed by such a devastating setback, but Richard refused to give up. Over the next year, he fought tirelessly to regain his mobility, eventually relearning how to walk. His recovery was nothing short of miraculous, a testament to his unbreakable spirit.
