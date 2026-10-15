@@ -887,6 +887,12 @@
     padding: 5.25rem 0 1.25rem;
     font-size: min(4vw, 1.2em);
   }
+  #footer .mt {
+    margin-top: 30px;
+  }
+  #footer span {
+    font-size: 1rem;
+  }
   #footer .left-section {
     margin: auto;
     margin-bottom: 3.125rem;

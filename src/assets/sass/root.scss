@@ -1035,6 +1035,14 @@
         padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
         font-size: min(4vw, 1.2em);
 
+        .mt {
+            margin-top:30px;
+        }
+
+        span {
+            font-size: 1rem;
+        }
+
         .left-section {
             margin: auto;
             margin-bottom: calc(50 / 16 * 1rem);
