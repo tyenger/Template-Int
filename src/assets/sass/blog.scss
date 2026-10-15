@@ -433,17 +433,6 @@
         align-items: center;
         row-gap: calc(50 / 16 * 1em);
 
-        .blog-featured-group {
-            width: 100%;
-            padding: calc(35 / 16 * 1em) calc(30 / 16 * 1em);
-            border: 1px solid #ebebeb;
-            border-radius: calc(8 / 16 * 1em);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
         .blog-header {
             font-size: calc(20 / 16 * 1em);
             font-weight: bold;

@@ -374,16 +374,6 @@
     align-items: center;
     row-gap: 3.125em;
   }
-  .blog-sidebar .blog-featured-group {
-    width: 100%;
-    padding: 2.1875em 1.875em;
-    border: 1px solid #ebebeb;
-    border-radius: 0.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
   .blog-sidebar .blog-header {
     font-size: 1.25em;
     font-weight: bold;
