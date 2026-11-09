@@ -6,7 +6,7 @@ date: 2026-10-28T19:54:00.000-05:00
 tags:
   - post
 image: /assets/images/blog/wnbf-award.webp
-imageAlt: WNBF
+imageAlt: Award Ceremony
 ---
 On Saturday, October 24, 2026, Richard took 1st place in Men's Masters Professional Bodybuilding at the WNBF Midwest Natural Nationals in Liberty, Missouri. It is a national title, and one he earned under circumstances few competitors ever face.
  
